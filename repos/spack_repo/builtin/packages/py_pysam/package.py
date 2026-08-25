@@ -39,7 +39,7 @@ class PyPysam(PythonPackage):
     depends_on("py-setuptools", type="build")
 
     # pyproject.toml pins Cython>=3,<4 as of 0.24.0
-    depends_on("py-cython@3:3", when="@0.24:", type="build")
+    depends_on("py-cython@3", when="@0.24:", type="build")
     depends_on("py-cython@0.29.12:3", when="@0.23.3", type="build")
     depends_on("py-cython@0.29.30:2", when="@0.21", type="build")
     depends_on("py-cython@0.29.12:2", when="@0.18:0.19", type="build")
