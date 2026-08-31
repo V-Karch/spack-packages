@@ -31,4 +31,3 @@ class Krona(Package):
         install_tree(self.stage.source_path, prefix)
         install_pl = Executable(join_path(self.stage.source_path, "install.pl"))
         install_pl("--prefix", prefix)
-
