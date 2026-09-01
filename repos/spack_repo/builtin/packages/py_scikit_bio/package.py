@@ -18,7 +18,7 @@ class PyScikitBio(PythonPackage):
     license("BSD-3-Clause", checked_by="V-Karch")
 
     version("0.7.3", sha256="2492ebf2f6432d24c1030a0cd96d7708c2b57bc31b097a5ec838881792401ec5")
-    
+
     depends_on("python@3.10:", type=("build", "run"))
     depends_on("py-setuptools", type="build")
     depends_on("py-wheel", type="build")
