@@ -15,9 +15,9 @@ class PyBiomFormat(PythonPackage):
     pypi = "biom-format/biom-format-2.1.6.tar.gz"
 
     version(
-        "2.1.17", 
+        "2.1.17",
         sha256="8e3fa07a432b3f6d5c3cad491ef1f27b18d10fc151ca2d223761be4f0b050479",
-        url="https://files.pythonhosted.org/packages/cf/63/da18b1cdb9de07f8ad07d71535eac0460d065c71312ad400f55f6c2865ae/biom_format-2.1.17.tar.gz"
+        url="https://files.pythonhosted.org/packages/cf/63/da18b1cdb9de07f8ad07d71535eac0460d065c71312ad400f55f6c2865ae/biom_format-2.1.17.tar.gz",
     )
     version("2.1.15", sha256="3bda2096e663dc1cb6f90f51b394da0838b9be5164a44370c134ce5b3b2a4dd3")
     version("2.1.14", sha256="c8bac94ab6aa8226c0d38af7a3341d65e5f3664b9f45ec44fdf8b5275b2f92c1")
