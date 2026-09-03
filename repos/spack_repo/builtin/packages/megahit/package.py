@@ -52,6 +52,7 @@ class Megahit(CMakePackage, MakefilePackage):
         when="@1.2.9: %c,cxx=gcc@13:",
     )
 
+
 class MakefileBuilder(MakefileBuilder):
     def install(self, pkg, spec, prefix):
         mkdirp(prefix.bin)
