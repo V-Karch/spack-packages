@@ -48,7 +48,7 @@ class Kallisto(CMakePackage):
 
     # https://github.com/pachterlab/kallisto/pull/506
     patch(
-        "https://github.com/pachterlab/kallisto/commit/a5caefb.patch",
+        "https://github.com/pachterlab/kallisto/commit/a5caefb.patch?full_index=1",
         sha256="a7002ce51d4dfeab8bce3e1d696ad034328b38e6d794de0c1400d07fb77e018a",
         when="@0.50.1:",
     )
