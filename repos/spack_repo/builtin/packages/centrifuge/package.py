@@ -20,7 +20,7 @@ class Centrifuge(MakefilePackage):
 
     # Adds arm compilation support
     patch(
-        "https://patch-diff.githubusercontent.com/raw/DaehwanKimLab/centrifuge/pull/291.patch",
+        "https://patch-diff.githubusercontent.com/raw/DaehwanKimLab/centrifuge/pull/291.patch?full_index=1",
         sha256="2e09ccfdd1812b2f2de6b00a265e20f89569b7fcae3d54e3124344b5ea5a40f0",
         when="target=aarch64:",
     )
