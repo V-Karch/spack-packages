@@ -18,9 +18,9 @@ class Centrifuge(MakefilePackage):
 
     depends_on("cxx", type="build")  # generated
 
-    # https://github.com/DaehwanKimLab/centrifuge/pull/291                                                                                                                                  
-    patch("centrifuge-1.0.4-arm-neon.patch", when="target=aarch64:")     
-    
+    # https://github.com/DaehwanKimLab/centrifuge/pull/291
+    patch("centrifuge-1.0.4-arm-neon.patch", when="target=aarch64:")
+
     def build(self, spec, prefix):
         make()
 
