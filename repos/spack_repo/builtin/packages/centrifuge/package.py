@@ -22,7 +22,7 @@ class Centrifuge(MakefilePackage):
     patch(
         "https://patch-diff.githubusercontent.com/raw/DaehwanKimLab/centrifuge/pull/291.patch",
         sha256="2e09ccfdd1812b2f2de6b00a265e20f89569b7fcae3d54e3124344b5ea5a40f0",
-        when="target=aarch64:"
+        when="target=aarch64:",
     )
 
     def build(self, spec, prefix):
