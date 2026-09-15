@@ -18,8 +18,12 @@ class Centrifuge(MakefilePackage):
 
     depends_on("cxx", type="build")  # generated
 
-    # https://github.com/DaehwanKimLab/centrifuge/pull/291
-    patch("centrifuge-1.0.4-arm-neon.patch", when="target=aarch64:")
+    # Adds arm compilation support
+    patch(
+        "https://patch-diff.githubusercontent.com/raw/DaehwanKimLab/centrifuge/pull/291.patch",
+        sha256="2e09ccfdd1812b2f2de6b00a265e20f89569b7fcae3d54e3124344b5ea5a40f0",
+        when="target=aarch64:"
+    )
 
     def build(self, spec, prefix):
         make()
