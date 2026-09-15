@@ -18,10 +18,10 @@ class Centrifuge(MakefilePackage):
 
     depends_on("cxx", type="build")  # generated
 
-    def flag_handler(self, name, flags):                                                                                                                                                                         
-        if name == "cxxflags" and self.spec.satisfies("target=aarch64:"):                                                                                                                                        
-            flags.append("-fsigned-char")                                                                                                                                                                        
-        return (flags, None, None) 
+    def flag_handler(self, name, flags):
+        if name == "cxxflags" and self.spec.satisfies("target=aarch64:"):
+            flags.append("-fsigned-char")
+        return (flags, None, None)
 
     # Adds arm compilation support
     patch(
