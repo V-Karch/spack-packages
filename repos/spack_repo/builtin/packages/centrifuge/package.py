@@ -18,11 +18,10 @@ class Centrifuge(MakefilePackage):
 
     depends_on("cxx", type="build")  # generated
 
-    def setup_build_environment(self, env):
-        # Conversion issue with alphabet.cpp on arm
-        # narrowing conversion of '-1' from 'int' to 'char' [-Wnarrowing]
-        with when("target=aarch64:"):
-            env.append_flags("CXXFLAGS", "-fsigned-char")
+    def flag_handler(self, name, flags):                                                                                                                                                                         
+        if name == "cxxflags" and self.spec.satisfies("target=aarch64:"):                                                                                                                                        
+            flags.append("-fsigned-char")                                                                                                                                                                        
+        return (flags, None, None) 
 
     # Adds arm compilation support
     patch(
