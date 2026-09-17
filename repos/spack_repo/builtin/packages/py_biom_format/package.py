@@ -15,7 +15,7 @@ class PyBiomFormat(PythonPackage):
     pypi = "biom-format/biom-format-2.1.6.tar.gz"
 
     def url_for_version(self, version):
-        filename = "biom_format" if version >= "2.1.17" else "biom-format"
+        filename = "biom_format" if version >= Version("2.1.17") else "biom-format"
         return f"https://files.pythonhosted.org/packages/source/b/biom-format/{filename}-{version}.tar.gz"
 
     version("2.1.17", sha256="8e3fa07a432b3f6d5c3cad491ef1f27b18d10fc151ca2d223761be4f0b050479")
