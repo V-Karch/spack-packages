@@ -13,7 +13,6 @@ class PyScikitBio(PythonPackage):
 
     homepage = "https://scikit.bio/"
     pypi = "scikit-bio/scikit_bio-0.7.3.tar.gz"
-    url = "https://files.pythonhosted.org/packages/f1/b7/9a349408f2edb09be83a2d105a0c1ecbfcb52d794abfeb601a12a3cc5093/scikit_bio-0.7.3.tar.gz"
 
     license("BSD-3-Clause", checked_by="V-Karch")
 
