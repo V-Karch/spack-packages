@@ -33,7 +33,7 @@ class Cpio(AutotoolsPackage, GNUMirrorPackage):
     def patch(self):
         """Fix mutiple definition of char *program_name for gcc@10: and clang"""
         filter_file(r"char \*program_name;", "", "src/global.c")
-        
+
         if self.spec.satisfies("%gcc@13:"):
             filter_file(
                 r"extern int \(\*xstat\) \(\);",
