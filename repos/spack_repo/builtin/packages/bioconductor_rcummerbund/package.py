@@ -26,7 +26,7 @@ class BioconductorRcummerbund(RPackage):
         "2.50.0",
         sha256="887ad38f0fa6cf7910d49ac812b46b4742e2495bf28dfe16e891dc1f5d663fc4",
     )
-    
+
     depends_on("r@2.7.0:", type=("build", "run"))
     depends_on("r-biocgenerics@0.3.2:", type=("build", "run"))
     depends_on("r-rsqlite", type=("build", "run"))
