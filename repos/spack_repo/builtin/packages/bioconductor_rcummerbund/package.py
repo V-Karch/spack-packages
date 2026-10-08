@@ -14,7 +14,7 @@ class BioconductorRcummerbund(RPackage):
     plotting functions for commonly used visualizations."""
 
     homepage = "https://www.bioconductor.org/packages/release/bioc/html/cummeRbund.html"
-    url = "https://bioconductor.posit.co/packages/3.21/bioc/src/contrib/cummeRbund_2.48.0.tar.gz"
+    url = "https://bioconductor.posit.co/packages/3.21/bioc/src/contrib/cummeRbund_2.50.0.tar.gz"
 
     bioc = "cummeRbund"
 
@@ -26,11 +26,7 @@ class BioconductorRcummerbund(RPackage):
         "2.50.0",
         sha256="887ad38f0fa6cf7910d49ac812b46b4742e2495bf28dfe16e891dc1f5d663fc4",
     )
-    version(
-        "2.48.0",
-        sha256="1380ce31f9189b443b892a09cbe0e7119582647c8eb9a4f1c7ef33fe692ea08c",
-    )
-
+    
     depends_on("r@2.7.0:", type=("build", "run"))
     depends_on("r-biocgenerics@0.3.2:", type=("build", "run"))
     depends_on("r-rsqlite", type=("build", "run"))
