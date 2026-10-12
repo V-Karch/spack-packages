@@ -24,8 +24,8 @@ class SraTools(CMakePackage):
 
     depends_on("openjdk")
     depends_on("flex@2.6:")
-    depends_on("libxml2@:2.13", when="@:3.3.0") # Older versions break with newer libxml2
-    depends_on("libxml2", when="@3.4.1:") # Constraint is no longer needed here
+    depends_on("libxml2@:2.13", when="@:3.3.0")  # Older versions break with newer libxml2
+    depends_on("libxml2", when="@3.4.1:")  # Constraint is no longer needed here
     depends_on("ncbi-vdb")
     depends_on("ncbi-vdb@3.0.2:", when="@3.0.3:")
     depends_on("ncbi-vdb@3.3.0:", when="@3.3.0:")
