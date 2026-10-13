@@ -154,5 +154,5 @@ class Masurca(Package):
         installer()
         # For @4: install.sh installs straight into $DEST (= prefix), so only
         # older versions need the source tree copied over.
-        if self.spec.satisfies("@:4"):
+        if self.spec.satisfies("@:3"):
             install_tree(".", prefix)
