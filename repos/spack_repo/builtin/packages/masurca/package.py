@@ -38,9 +38,7 @@ class Masurca(Package):
     patch("arm.patch", when="target=aarch64:")
 
     def patch(self):
-        filter_file(
-            "#include <sys/sysctl.h>", "", "global-1/CA8/src/AS_BAT/memoryMappedFile.H"
-        )
+        filter_file("#include <sys/sysctl.h>", "", "global-1/CA8/src/AS_BAT/memoryMappedFile.H")
         if self.spec.target.family == "aarch64":
             for makefile in "Makefile.am", "Makefile.in":
                 m = join_path("global-1", "prepare", makefile)
@@ -70,9 +68,7 @@ class Masurca(Package):
                 '#include "const_iterator_traits.hpp"',
                 "#include <cstdint>\n#include <iterator>\n#include <type_traits>\n"
                 '#include "const_iterator_traits.hpp"',
-                join_path(
-                    "global-1", "MUMmer", "include", "mummer", "48bit_iterator.hpp"
-                ),
+                join_path("global-1", "MUMmer", "include", "mummer", "48bit_iterator.hpp"),
                 string=True,
                 ignore_absent=True,
             )
@@ -89,9 +85,7 @@ class Masurca(Package):
                     ignore_absent=True,
                 )
 
-            hashfn = join_path(
-                "global-1", "SOAPdenovo2", "standardPregraph", "hashFunction.c"
-            )
+            hashfn = join_path("global-1", "SOAPdenovo2", "standardPregraph", "hashFunction.c")
             x86 = "#if defined(__x86_64__) || defined(__i386__)"
             filter_file(
                 r"static uint32_t cpuid ( uint32_t functionInput )",
@@ -109,8 +103,7 @@ class Masurca(Package):
             )
             filter_file(
                 r"uint32_t ecx = cpuid ( 1 );",
-                x86
-                + "\n\tuint32_t ecx = cpuid ( 1 );\n#else\n\tuint32_t ecx = 0;\n#endif",
+                x86 + "\n\tuint32_t ecx = cpuid ( 1 );\n#else\n\tuint32_t ecx = 0;\n#endif",
                 hashfn,
                 string=True,
                 ignore_absent=True,
