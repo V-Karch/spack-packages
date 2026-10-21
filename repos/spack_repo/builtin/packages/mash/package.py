@@ -35,7 +35,7 @@ class Mash(AutotoolsPackage):
     patch(
         "https://patch-diff.githubusercontent.com/raw/marbl/Mash/pull/192.patch?full_index=1",
         sha256="b5a44b078fdf15cda8a535b30b209252ab8f9aff9fcbeb10edf2aa4a2d7d32eb",
-        when="%gcc@12:"
+        when="%gcc@12:",
     )
 
     def patch(self):
