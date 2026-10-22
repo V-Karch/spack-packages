@@ -40,10 +40,6 @@ class Amber(CMakePackage, Package, CudaPackage):
 
     maintainers("hseara")
 
-    # The Amber license does not allow redistribution of the sources or of
-    # binaries built from them.
-    redistribute(source=False, binary=False)
-
     # Amber26: PMEMD-only source distribution. The archive is named
     # ``pmemd26_tar.bz2``; Spack would otherwise treat it as a bare bzip2 file
     # instead of a tarball, so spell out the extension.
