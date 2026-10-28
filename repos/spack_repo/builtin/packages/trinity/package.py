@@ -67,9 +67,9 @@ class Trinity(MakefilePackage):
 
     # 2.15.2 builds bamsifter's bundled htslib from git sources, whose
     # configure requires these libraries (bzip2/lzma/zlib are not optional)
-    depends_on("zlib-api", when="@2.15.2")
-    depends_on("bzip2", when="@2.15.2")
-    depends_on("xz", when="@2.15.2")
+    depends_on("zlib-api", when="@2.15.2.FULL:")
+    depends_on("bzip2", when="@2.15.2.FULL:")
+    depends_on("xz", when="@2.15.2.FULL:")
 
     # There is no documented list of these deps, but they're in the Dockerfile
     #  and we have runtime errors without them
